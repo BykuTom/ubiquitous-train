@@ -5,12 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      section {
-        min-height: 100vh;
+      :root {
+        --backgroundColor: white;
+        --textColor: black;
+        --fancy-font: "Courier New", Courier, monospace;
+      }
+      .dark {
+        --backgroundColor: black;
+        --textColor: white;
+      }
+      body {
+        background-color: var(--backgroundColor);
+        color: var(--textColor);
+      }
+      .buttonclass {
+        padding: 16px;
+        background-color: var(--textColor);
+        color: var(--backgroundColor);
+        font-family: var(--fancy-font);
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+        filter: blur(1px);
+        transition: filter 0.3s linear;
+      }
+      .buttonclass:hover {
+        filter: blur(0px);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font: var(--fancy-font);
       }
     </style>
   </head>
-  <body>
+  <body class="dark">
     <header id="Top">
       <h1>It is I, Tom</h1>
       <nav aria-label="primary">
@@ -27,19 +60,25 @@
         <article>
           <header><h3>I make cool websites</h3></header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-            labore corrupti, numquam incidunt obcaecati adipisci ipsam tempora
-            velit ut laborum est odio ipsa iusto animi accusantium modi
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br />
+            Corporis, labore corrupti, numquam incidunt obcaecati adipisci ipsam
+            tempora velit ut laborum est odio ipsa iusto animi accusantium modi
             exercitationem. Impedit, tenetur.
+            <br />
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+            maiores minus cum voluptatibus quidem suscipit fuga earum officiis.
           </p>
         </article>
         <footer>
-          <buton class="buttonclass"></buton>
+          <buton class="buttonclass">Learn More</buton>
+          <a href="#Contact" class="buttonclass secondary">Contact Me</a>
         </footer>
       </section>
       <section id="About">
-        <h2>Title</h2>
+        <h2>About</h2>
         <article>
+          <header><h2>About Article</h2></header>
           <p>
             Eligendi quidem accusamus placeat enim ipsum sit repudiandae
             architecto beatae nobis impedit, dolorum doloribus incidunt nemo
@@ -48,7 +87,7 @@
           </p>
         </article>
         <footer>
-          <buton class="buttonclass"></buton>
+          <buton class="buttonclass"> Pretty btton</buton>
         </footer>
       </section>
       <section id="Contact">
